@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Guitar Ally Club</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+      $(window).load(function () {
+        $(".loading").fadeOut("slow");
+      });
+    </script>
+    <script>
+      function changeyear() {
+        switch (document.getElementById("year").value) {
+          case "0":
+            x = "少於一年";
+            break;
+          case "1":
+            x = "一年";
+            break;
+          case "2":
+            x = "兩年";
+            break;
+          case "3":
+            x = "三年";
+            break;
+          case "4":
+            x = "四年";
+            break;
+          case "5":
+            x = "五年";
+            break;
+          case "6":
+            x = "六年";
+            break;
+          case "7":
+            x = "七年";
+            break;
+          case "8":
+            x = "八年";
+            break;
+          case "9":
+            x = "九年";
+            break;
+          case "10":
+            x = "十年";
+            break;
+          case "11":
+            x = "十年以上";
+            break;
+          default:
+            x = "少於一年";
+        }
+        document.getElementById("yeardisplay").innerHTML = x;
+      }
+      function sub() {
+        var anno = "姓名：" + document.fOrm.name.value + "\n";
+        if (document.fOrm.gender[0].checked) {
+          anno += "性別：" + document.fOrm.gender[0].value + "\n";
+        } else if (document.fOrm.gender[1].checked) {
+          anno += "性別：" + document.fOrm.gender[1].value + "\n";
+        } else {
+          anno += "性別：" + document.fOrm.gender[2].value + "\n";
+        }
+        anno += "科目編號：" + document.fOrm.cid.value + "\n";
+        anno += "班別：" + document.fOrm.cla.value + "\n";
+        anno += "E-mail：" + document.fOrm.email.value + "\n";
+        anno += "結他年資（年）：" + document.fOrm.year.value + "\n";
+        anno += "自述（50字內）：" + document.fOrm.com.value + "\n";
+        alert(anno);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Loading Screen Start-->
+    <div class="loading">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    <!--Loading Screen End-->
+    <!--Header Start---->
+    <div>
+      <div class="banner"><img src="image/page_header.png" /></div>
+      <div class="logo"><img src="image/logo.png" /></div>
+    </div>
+    <div class="nav">
+      <div
+        class="select_bg"
+        style="margin: 0 0 0 100px"
+        onclick="window.location='index.html';"
+      >
+        <div>主頁</div>
+      </div>
+      <div class="select_bg" onclick="window.location='about.html';">
+        <div>關於</div>
+      </div>
+      <div class="select_bg" onclick="window.location='activity.html';">
+        <div>活動</div>
+      </div>
+      <div class="select_bg" onclick="window.location='application.html';">
+        <div>報名加入</div>
+      </div>
+      <div
+        class="select_bg"
+        style="margin: 0 100px 0 0"
+        onclick="window.location='contact.html';"
+      >
+        <div>聯絡我們</div>
+      </div>
+      <div class="menu">
+        <img
+          src="image/list.png"
+          width="40px"
+          height="40px"
+          style="margin: 10px 30px"
+        />
+        <div class="sub">
+          <div onclick="window.location='index.html';">主頁</div>
+          <div onclick="window.location='about.html';">關於</div>
+          <div onclick="window.location='activity.html';">活動</div>
+          <div onclick="window.location='application.html';">報名加入</div>
+          <div onclick="window.location='contact.html';">聯絡我們</div>
+        </div>
+      </div>
+    </div>
+    <!--Header End-->
+    <div class="middle">
+      <img src="image/application_top_banner.png" class="top_banner" />
+    </div>
+    <div class="content">
+      <div class="box box_content ratio64">
+        <div>報名表</div>
+        <form
+          style="line-height: 50px; padding: 20px"
+          onsubmit="sub();"
+          name="fOrm"
+        >
+          姓名：<input
+            type="text"
+            size="20"
+            name="name"
+            maxlength="20"
+            pattern="[a-zA-z]{1,20}"
+            title="All character!"
+            required
+          /><br />
+          性別：<input type="radio" name="gender" value="male" />男<input
+            type="radio"
+            name="gender"
+            value="female"
+          />女<input
+            type="radio"
+            name="gender"
+            value="other"
+            checked
+          />其它<br />
+          科目編號：<input
+            type="text"
+            size="8"
+            maxlength="8"
+            style="margin-right: 5px"
+            pattern="[A-Za-z]{2,2}[0-9]{6,6}"
+            title="Pattern: AA000000 eg.IT114115"
+            name="cid"
+            required
+          />班別：<input
+            list="class"
+            name="cla"
+            size="2"
+            maxlength="2"
+            required
+          />
+          <datalist id="class">
+            <option value="1A"></option>
+            <option value="1B"></option>
+            <option value="1C"></option>
+            <option value="2A"></option>
+            <option value="2B"></option>
+            <option value="2C"></option>
+            <option value="3A"></option>
+            <option value="3B"></option>
+            <option value="3C"></option>
+            <option value="4A"></option>
+            <option value="4B"></option>
+            <option value="4C"></option>
+          </datalist>
+
+          <br />
+          E-mail：<input type="email" name="email" required /><br />
+          結他年資（年）：<input
+            type="range"
+            name="year"
+            id="year"
+            value="0"
+            min="0"
+            max="11"
+            oninput="changeyear()"
+          /><span id="yeardisplay">少於一年</span><br />
+          自述（50字內）：<br />
+          <textarea
+            rows="5"
+            style="width: 70%; resize: none; font-size: 15px"
+            name="com"
+            required
+          ></textarea
+          ><br />
+          <input
+            type="submit"
+            value="提交"
+            style="background-color: #8bc34a; margin-right: 10px"
+          /><input
+            type="reset"
+            value="重設"
+            style="background-color: #f44336"
+          />
+        </form>
+      </div>
+      <fieldset class="ratio64">
+        <legend>報名時間表</legend>
+        <section class="timeline" style="padding: 0 10px 10px 10px">
+          <ul>
+            <li>
+              <div>八月十日 開放報名系統</div>
+            </li>
+            <li>
+              <div>八月二十日 截止報名</div>
+            </li>
+            <li>
+              <div>八月二十三日 公報面試安排</div>
+            </li>
+            <li>
+              <div>九月一日 公報面試結果</div>
+            </li>
+            <li>
+              <div>九月三日 迎新日</div>
+            </li>
+          </ul>
+        </section>
+      </fieldset>
+    </div>
+    <!--Footer Start-->
+    <div class="footer content middle">
+      <div>
+        版權為Mark Lai所有，未經允許不可抄襲。<br />
+        Copyright © 2016 Mark Lai. All rights reserved.<br />
+      </div>
+    </div>
+    <!--Footer End-->
+  </body>
+</html>
