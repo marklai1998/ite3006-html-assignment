@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Guitar Ally Club</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+      $(window).load(function () {
+        $(".loading").fadeOut("slow");
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--Loading Screen Start-->
+    <div class="loading">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    <!--Loading Screen End-->
+    <!--Header Start---->
+    <div>
+      <div class="banner"><img src="image/page_header.png" /></div>
+      <div class="logo"><img src="image/logo.png" /></div>
+    </div>
+    <div class="nav">
+      <div
+        class="select_bg"
+        style="margin: 0 0 0 100px"
+        onclick="window.location='index.html';"
+      >
+        <div>主頁</div>
+      </div>
+      <div class="select_bg" onclick="window.location='about.html';">
+        <div>關於</div>
+      </div>
+      <div class="select_bg" onclick="window.location='activity.html';">
+        <div>活動</div>
+      </div>
+      <div class="select_bg" onclick="window.location='application.html';">
+        <div>報名加入</div>
+      </div>
+      <div
+        class="select_bg"
+        style="margin: 0 100px 0 0"
+        onclick="window.location='contact.html';"
+      >
+        <div>聯絡我們</div>
+      </div>
+      <div class="menu">
+        <img
+          src="image/list.png"
+          width="40px"
+          height="40px"
+          style="margin: 10px 30px"
+        />
+        <div class="sub">
+          <div onclick="window.location='index.html';">主頁</div>
+          <div onclick="window.location='about.html';">關於</div>
+          <div onclick="window.location='activity.html';">活動</div>
+          <div onclick="window.location='application.html';">報名加入</div>
+          <div onclick="window.location='contact.html';">聯絡我們</div>
+        </div>
+      </div>
+    </div>
+    <!--Header End-->
+    <div class="middle">
+      <img src="image/contact_top_banner.png" class="top_banner" />
+    </div>
+    <div class="content" style="padding: 30px 50px">
+      <div class="map ratio64">
+        <fieldset>
+          <legend>地圖</legend>
+          <div id="map"></div>
+        </fieldset>
+      </div>
+      <div class="ratio64">
+        <div class="box box_content">
+          <div>聯絡資料</div>
+          <div style="padding: 20px">
+            <table>
+              <tr>
+                <td style="white-space: nowrap">地址：</td>
+                <td>新界將軍澳景嶺路3號香港專業教育學院(李惠利)</td>
+              </tr>
+              <tr>
+                <td style="white-space: nowrap">電話：</td>
+                <td>+852 12345678</td>
+              </tr>
+              <tr>
+                <td style="white-space: nowrap">傳真：</td>
+                <td>N/A</td>
+              </tr>
+              <tr>
+                <td style="white-space: nowrap">電郵：</td>
+                <td>marklai1998@gmail.com</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="box box_content">
+          <div style="float: left; height: 100%">社交</div>
+          <div style="padding: 18px 0 12px 110px">
+            <a href="https://www.facebook.com/hamster.mark"
+              ><img src="image/facebook.png" style="margin-right: 20px"
+            /></a>
+            <a href="https://twitter.com/MrMatchesExMark"
+              ><img src="image/twitter.png"
+            /></a>
+          </div>
+        </div>
+        <div class="box box_content">
+          <div>留言信箱</div>
+          <form style="padding: 20px" style="padding: 20px">
+            <textarea
+              rows="5"
+              style="width: 100%; resize: none; font-size: 15px"
+              required
+            ></textarea>
+            <input
+              type="submit"
+              value="提交"
+              style="margin-top: 10px; background-color: #2196f3"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myMap() {
+        var mapOptions = {
+          center: new google.maps.LatLng(22.3058084, 114.2535889),
+          zoom: 18,
+        };
+        var map = new google.maps.Map(
+          document.getElementById("map"),
+          mapOptions
+        );
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <!--Footer Start-->
+    <div class="footer content middle">
+      <div>
+        版權為Mark Lai所有，未經允許不可抄襲。<br />
+        Copyright © 2016 Mark Lai. All rights reserved.<br />
+      </div>
+    </div>
+    <!--Footer End-->
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Guitar Ally Club</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+      $(window).load(function () {
+        $(".loading").fadeOut("slow");
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--Loading Screen Start-->
+    <div class="loading">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    <!--Loading Screen End-->
+    <!--Header Start---->
+    <div>
+      <div class="banner"><img src="image/page_header.png" /></div>
+      <div class="logo"><img src="image/logo.png" /></div>
+    </div>
+    <div class="nav">
+      <div
+        class="select_bg"
+        style="margin: 0 0 0 100px"
+        onclick="window.location='index.html';"
+      >
+        <div>主頁</div>
+      </div>
+      <div class="select_bg" onclick="window.location='about.html';">
+        <div>關於</div>
+      </div>
+      <div class="select_bg" onclick="window.location='activity.html';">
+        <div>活動</div>
+      </div>
+      <div class="select_bg" onclick="window.location='application.html';">
+        <div>報名加入</div>
+      </div>
+      <div
+        class="select_bg"
+        style="margin: 0 100px 0 0"
+        onclick="window.location='contact.html';"
+      >
+        <div>聯絡我們</div>
+      </div>
+      <div class="menu">
+        <img
+          src="image/list.png"
+          width="40px"
+          height="40px"
+          style="margin: 10px 30px"
+        />
+        <div class="sub">
+          <div onclick="window.location='index.html';">主頁</div>
+          <div onclick="window.location='about.html';">關於</div>
+          <div onclick="window.location='activity.html';">活動</div>
+          <div onclick="window.location='application.html';">報名加入</div>
+          <div onclick="window.location='contact.html';">聯絡我們</div>
+        </div>
+      </div>
+    </div>
+    <!--Header End-->
+    <div class="index_top_banner middle">
+      <div class="text">
+        <span>喜歡彈結他？</span><br />
+        <span>想結識朋友？</span><br />
+        <div style="clear: both"></div>
+        <span style="font-size: 60px; color: #3f3f3f">加入我們吧！</span><br />
+        <input
+          type="button"
+          value="了解更多"
+          onclick="window.location='about.html';"
+          style="
+            margin-top: 20px;
+            font-size: 35px;
+            border: 1px solid #5f5f5f;
+            color: #3f3f3f;
+            background-color: transparent;
+            padding: 6px 16px;
+          "
+        />
+      </div>
+    </div>
+    <div class="content" style="padding: 20px">
+      <div class="box box_content">
+        <div>會員作品</div>
+        <div
+          style="
+            padding: 20px;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+          "
+        >
+          <object
+            width="235"
+            height="150"
+            data="http://www.youtube.com/embed/bvbAZ2w-ggE"
+            class="box"
+          ></object>
+          <object
+            width="235"
+            height="150"
+            data="http://www.youtube.com/embed/_lUxR6En_JQ"
+            class="box"
+          ></object>
+          <object
+            width="235"
+            height="150"
+            data="http://www.youtube.com/embed/gQdeW20sht8"
+            class="box"
+          ></object>
+          <object
+            width="235"
+            height="150"
+            data="http://www.youtube.com/embed/3RiGs08gtaY"
+            class="box"
+          ></object>
+        </div>
+      </div>
+      <div class="box box_content">
+        <div>最新公告</div>
+        <div style="padding: 0 0 5px 0">
+          <div
+            class="box index_box index_box_left"
+            style="background-image: url(image/index_img_1.png)"
+          >
+            <div>
+              2016-2017年度活動日程新鮮出爐！<br />
+              <input
+                type="button"
+                value="立即觀看"
+                onclick="window.location='activity.html';"
+              />
+            </div>
+          </div>
+          <div
+            class="box index_box index_box_right"
+            style="background-image: url(image/index_img_2.png)"
+          >
+            <div>
+              新一屆Guitar Ally Club現正招生<br />
+              <input
+                type="button"
+                value="立即報名"
+                style="right: 20px"
+                onclick="window.location='application.html';"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer Start-->
+    <div class="footer content middle">
+      <div>
+        版權為Mark Lai所有，未經允許不可抄襲。<br />
+        Copyright © 2016 Mark Lai. All rights reserved.<br />
+      </div>
+    </div>
+    <!--Footer End-->
+  </body>
+</html>

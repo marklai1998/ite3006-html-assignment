@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Guitar Ally Club</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+      $(window).load(function () {
+        $(".loading").fadeOut("slow");
+      });
+    </script>
+  </head>
+
+  <body>
+    <!--Loading Screen Start-->
+    <div class="loading">
+      <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </div>
+    <!--Loading Screen End-->
+    <!--Header Start---->
+    <div>
+      <div class="banner"><img src="image/page_header.png" /></div>
+      <div class="logo"><img src="image/logo.png" /></div>
+    </div>
+    <div class="nav">
+      <div
+        class="select_bg"
+        style="margin: 0 0 0 100px"
+        onclick="window.location='index.html';"
+      >
+        <div>主頁</div>
+      </div>
+      <div class="select_bg" onclick="window.location='about.html';">
+        <div>關於</div>
+      </div>
+      <div class="select_bg" onclick="window.location='activity.html';">
+        <div>活動</div>
+      </div>
+      <div class="select_bg" onclick="window.location='application.html';">
+        <div>報名加入</div>
+      </div>
+      <div
+        class="select_bg"
+        style="margin: 0 100px 0 0"
+        onclick="window.location='contact.html';"
+      >
+        <div>聯絡我們</div>
+      </div>
+      <div class="menu">
+        <img
+          src="image/list.png"
+          width="40px"
+          height="40px"
+          style="margin: 10px 30px"
+        />
+        <div class="sub">
+          <div onclick="window.location='index.html';">主頁</div>
+          <div onclick="window.location='about.html';">關於</div>
+          <div onclick="window.location='activity.html';">活動</div>
+          <div onclick="window.location='application.html';">報名加入</div>
+          <div onclick="window.location='contact.html';">聯絡我們</div>
+        </div>
+      </div>
+    </div>
+    <!--Header End-->
+    <div class="content">
+      <div class="box ratio64">
+        <img src="image/aboutus_top_banner.jpg" style="width: 100%" /><br />
+        <span style="padding: 10px 12px">
+          圖攝自2014-15年度國際結他交流會
+        </span>
+      </div>
+      <div class="box box_content ratio64">
+        <div>關於我們</div>
+        <div style="padding: 20px">
+          Guitar Ally Club<br />
+          為一個校內結他團體<br />
+          成立於2010年<br />
+          旨在聚集一眾結他愛好者<br />
+          提供平台互相交流<br />
+          並透過一系列活動加深會員音樂造詣<br />
+          以及對社會作出貢獻<br />
+          <input
+            type="button"
+            value="加入我們"
+            style="margin-top: 10px; background-color: #8bc34a"
+            onclick="window.location='application.html';"
+          />
+        </div>
+      </div>
+      <div style="clear: both"></div>
+      <div class="box box_content half" style="padding-bottom: 5px">
+        <div>成員</div>
+        <div class="white_content">
+          <div>會長</div>
+          洪曉萍
+        </div>
+        <div class="white_content">
+          <div>副會長</div>
+          賴俊書
+        </div>
+        <div class="white_content">
+          <div>書記</div>
+          謝紹鈺
+        </div>
+        <div class="white_content">
+          <div>宣傳</div>
+          陳思惟
+        </div>
+        <div class="white_content">
+          <div>財務</div>
+          高詩婷
+        </div>
+        <div style="clear: both"></div>
+      </div>
+      <div class="box box_content half" style="padding-bottom: 5px">
+        <div>導師</div>
+        <div class="white_content">林禹茵老師</div>
+        <div class="white_content">楊憲柏老師</div>
+        <div class="white_content">王秋萍老師</div>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+    <!--Footer Start-->
+    <div class="footer content middle">
+      <div>
+        版權為Mark Lai所有，未經允許不可抄襲。<br />
+        Copyright © 2016 Mark Lai. All rights reserved.<br />
+      </div>
+    </div>
+    <!--Footer End-->
+  </body>
+</html>
